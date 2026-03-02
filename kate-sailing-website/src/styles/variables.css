@@ -1,0 +1,43 @@
+/* ============================================
+   Schooner Liberté — Design Tokens (CSS)
+   ============================================ */
+
+:root {
+  /* ---- Brand Colors ---- */
+  --color-navy:        #1B2A4A;
+  --color-navy-dark:   #131F38;
+  --color-navy-light:  #2A3D66;
+  --color-gold:        #8B7355;
+  --color-gold-light:  #A89070;
+  --color-gold-dark:   #6B5740;
+  --color-light-blue:  #DCE8F2;
+  --color-sky-blue:    #E8F0F8;
+  --color-white:       #FFFFFF;
+  --color-offwhite:    #F7F5F0;
+  --color-cream:       #FAF8F3;
+  --color-text:        #333333;
+  --color-text-light:  #666666;
+
+  /* ---- Typography ---- */
+  --font-heading: 'Cormorant Garamond', 'Georgia', serif;
+  --font-body:    'Lato', 'Helvetica Neue', Arial, sans-serif;
+
+  /* ---- Spacing ---- */
+  --section-padding:   80px 0;
+  --container-width:   1200px;
+  --container-padding: 0 24px;
+
+  /* ---- Transitions ---- */
+  --transition-fast: 0.2s ease;
+  --transition-med:  0.3s ease;
+
+  /* ---- Shadows ---- */
+  --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --shadow-med:  0 8px 30px rgba(0, 0, 0, 0.12);
+
+  /* ---- Border Radius ---- */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 24px;
+  --radius-full: 50%;
+}
