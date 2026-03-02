@@ -13,7 +13,7 @@ const Contact: React.FC = () => (
       <SectionTitle>Find Us</SectionTitle>
       <DepartureNote>
         Schooner Liberté departs daily from{' '}
-        <strong>Falmouth Harbor</strong> — right on the water.
+        <strong>Falmouth Harbor</strong>.
       </DepartureNote>
 
       <InfoGrid>

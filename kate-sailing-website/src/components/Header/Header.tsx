@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { FaInstagram, FaTripadvisor, FaChevronDown } from 'react-icons/fa';
 
+const BASE = process.env.PUBLIC_URL ?? '';
+
 const FAREHARBOR_URL =
   'https://fareharbor.com/embeds/book/theschoonerliberte/items/?flow=18587&back=https%3A%2F%2Fwww.theliberte.com%2F&g4=yes';
 
@@ -32,39 +34,54 @@ const Header: React.FC<HeaderProps> = ({ transparent = false }) => {
     <Wrapper $scrolled={scrolled} $transparent={isTransparent}>
       <Inner>
         {/* ── Brand ── */}
-        <Brand href="/" $light={isTransparent}>
+        <Brand href={BASE || '/'} $light={isTransparent}>
           Schooner Liberté
         </Brand>
 
         {/* ── Desktop nav + socials + CTA ── */}
         <RightSide>
           <Nav>
-            <NavLink href="/#about" $light={isTransparent}>
-              About
-            </NavLink>
-            <NavLink href="/#gallery" $light={isTransparent}>
+            {/* ── About dropdown ── */}
+            <DropdownWrap>
+              <NavLink href={`${BASE}/#about`} $light={isTransparent} as="a">
+                About
+                <ChevronIcon $light={isTransparent}>
+                  <FaChevronDown />
+                </ChevronIcon>
+              </NavLink>
+              <DropdownMenu $light={isTransparent}>
+                <DropdownLink href={`${BASE}/#about`} $light={isTransparent}>
+                  About the Boat
+                </DropdownLink>
+                <DropdownLink href={`${BASE}/faq`} $light={isTransparent}>
+                  FAQ
+                </DropdownLink>
+              </DropdownMenu>
+            </DropdownWrap>
+
+            <NavLink href={`${BASE}/#gallery`} $light={isTransparent}>
               Gallery
             </NavLink>
 
             {/* ── Charters dropdown ── */}
             <DropdownWrap>
-              <NavLink href="/#charters" $light={isTransparent} as="a">
+              <NavLink href={`${BASE}/#charters`} $light={isTransparent} as="a">
                 Private Charters
                 <ChevronIcon $light={isTransparent}>
                   <FaChevronDown />
                 </ChevronIcon>
               </NavLink>
               <DropdownMenu $light={isTransparent}>
-                <DropdownLink href="/private-charters" $light={isTransparent}>
+                <DropdownLink href={`${BASE}/private-charters`} $light={isTransparent}>
                   Private Charters
                 </DropdownLink>
-                <DropdownLink href="/bachelorette" $light={isTransparent}>
+                <DropdownLink href={`${BASE}/bachelorette`} $light={isTransparent}>
                   Bachelorette Parties
                 </DropdownLink>
               </DropdownMenu>
             </DropdownWrap>
 
-            <NavLink href="/#contact" $light={isTransparent}>
+            <NavLink href={`${BASE}/#contact`} $light={isTransparent}>
               Contact
             </NavLink>
           </Nav>
@@ -116,22 +133,25 @@ const Header: React.FC<HeaderProps> = ({ transparent = false }) => {
       {/* ── Mobile overlay ── */}
       {mobileOpen && (
         <MobileMenu>
-          <MobileLink href="/#about" onClick={handleNavClick}>
+          <MobileLink href={`${BASE}/#about`} onClick={handleNavClick}>
             About
           </MobileLink>
-          <MobileLink href="/#gallery" onClick={handleNavClick}>
+          <MobileSubLink href={`${BASE}/faq`} onClick={handleNavClick}>
+            FAQ
+          </MobileSubLink>
+          <MobileLink href={`${BASE}/#gallery`} onClick={handleNavClick}>
             Gallery
           </MobileLink>
-          <MobileLink href="/#charters" onClick={handleNavClick}>
+          <MobileLink href={`${BASE}/#charters`} onClick={handleNavClick}>
             Private Charters
           </MobileLink>
-          <MobileSubLink href="/private-charters" onClick={handleNavClick}>
+          <MobileSubLink href={`${BASE}/private-charters`} onClick={handleNavClick}>
             Private Charters
           </MobileSubLink>
-          <MobileSubLink href="/bachelorette" onClick={handleNavClick}>
+          <MobileSubLink href={`${BASE}/bachelorette`} onClick={handleNavClick}>
             Bachelorette Parties
           </MobileSubLink>
-          <MobileLink href="/#contact" onClick={handleNavClick}>
+          <MobileLink href={`${BASE}/#contact`} onClick={handleNavClick}>
             Contact
           </MobileLink>
           <MobileSocials>
@@ -176,7 +196,7 @@ const Wrapper = styled.header<{ $scrolled: boolean; $transparent: boolean }>`
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  right: 0;
   z-index: 1000;
   backdrop-filter: blur(8px);
   transition: background ${({ theme }) => theme.transition.med},
@@ -424,15 +444,18 @@ const Hamburger = styled.button<{ $open: boolean; $light: boolean }>`
   flex-direction: column;
   justify-content: center;
   gap: 5px;
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
 
   span {
     display: block;
-    width: 100%;
+    width: 22px;
     height: 2.5px;
     border-radius: 2px;
-    transition: all ${({ theme }) => theme.transition.fast};
+    margin: 0 auto;
+    transition: background ${({ theme }) => theme.transition.med},
+      transform ${({ theme }) => theme.transition.fast},
+      opacity ${({ theme }) => theme.transition.fast};
     background: ${({ $light, theme }) =>
       $light ? theme.colors.white : theme.colors.navy};
   }
