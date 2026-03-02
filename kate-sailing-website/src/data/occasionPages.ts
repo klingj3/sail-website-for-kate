@@ -24,7 +24,7 @@ export const privateChartersData: OccasionPageData = {
 
 ### Charter Rates
 
-Rates start at **$1,400** for a morning sail and vary by date, time of day, and number of guests. For an exact quote for your event please email schoonerliberte@gmail.com.
+Rates start at **$1,400** for a morning sail — as little as **$29/person** with a full group — and vary by date, time of day, and number of guests. For an exact quote for your event please email schoonerliberte@gmail.com.
 
 *Rates include vessel, captain, crew, taxes, and brokerage fees.*
 *Not included: catering, beverages, or gratuity (customary 15–20%).*
@@ -89,7 +89,7 @@ Enjoy our 74′ schooner exclusively for your group (up to 49 guests)! Private c
 
 ### Private Charter Rates
 
-Rates start at **$1,400** for a morning sail and vary by date, time of day, and number of guests. For an exact quote for your event please email schoonerliberte@gmail.com.
+Rates start at **$1,400** for a morning sail — as little as **$29/person** with a full group — and vary by date, time of day, and number of guests. For an exact quote for your event please email schoonerliberte@gmail.com.
 
 *Rates include vessel, captain, crew, taxes, and brokerage fees.*
 *Not included: catering, beverages, or gratuity (customary 15–20%).*

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { FaInstagram, FaTripadvisor } from 'react-icons/fa';
 import CopyEmail from 'components/CopyEmail';
@@ -15,7 +16,7 @@ const Footer: React.FC = () => (
       <TopRow>
         {/* Brand + tagline */}
         <Brand>
-          <BrandName href="/">Schooner Liberté</BrandName>
+          <BrandName as={Link} to="/">Schooner Liberté</BrandName>
           <Tagline>Sailing Cape Cod since 2025 · Falmouth, MA</Tagline>
           <Socials>
             <SocialLink
@@ -43,10 +44,10 @@ const Footer: React.FC = () => (
           <FooterLink href="/#sails">Ticketed Sails</FooterLink>
           <FooterLink href="/#about">About</FooterLink>
           <FooterLink href="/#gallery">Gallery</FooterLink>
-          <FooterLink href="/private-charters">Private Charters</FooterLink>
-          <FooterLink href="/bachelorette">Bachelorette Parties</FooterLink>
+          <FooterLink as={Link} to="/private-charters">Private Charters</FooterLink>
+          <FooterLink as={Link} to="/bachelorette">Bachelorette Parties</FooterLink>
           <FooterLink href="/#contact">Contact</FooterLink>
-          <FooterLink href="/faq">FAQ</FooterLink>
+          <FooterLink as={Link} to="/faq">FAQ</FooterLink>
         </NavCol>
 
         {/* Info */}

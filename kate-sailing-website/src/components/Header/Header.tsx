@@ -51,7 +51,7 @@ const Header: React.FC<HeaderProps> = ({ transparent = false }) => {
               </NavLink>
               <DropdownMenu $light={isTransparent}>
                 <DropdownLink href={`${BASE}/#about`} $light={isTransparent}>
-                  About the Boat
+                  Liberté & Crew
                 </DropdownLink>
                 <DropdownLink href={`${BASE}/faq`} $light={isTransparent}>
                   FAQ

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { Container } from 'styles/shared';
 
@@ -15,10 +16,10 @@ const PrivateChartersSection: React.FC = () => (
           handle every detail.
         </Body>
         <CTARow>
-          <PrimaryButton href="/private-charters">
+          <PrimaryButton as={Link} to="/private-charters">
             Private Charters
           </PrimaryButton>
-          <SecondaryButton href="/bachelorette">
+          <SecondaryButton as={Link} to="/bachelorette">
             Bachelorette Parties
           </SecondaryButton>
         </CTARow>

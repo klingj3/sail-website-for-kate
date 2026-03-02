@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { Container, SectionTitle } from 'styles/shared';
 import { FaMapMarkerAlt, FaEnvelope, FaPhone, FaQuestionCircle } from 'react-icons/fa';
@@ -53,7 +54,7 @@ const Contact: React.FC = () => (
         <FaQuestionCircle />
         <span>
           Have more questions?{' '}
-          <FAQLink href="/faq">Check out our FAQ →</FAQLink>
+          <FAQLink as={Link} to="/faq">Check out our FAQ →</FAQLink>
         </span>
       </FAQNudge>
     </Container>

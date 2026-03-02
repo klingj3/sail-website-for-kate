@@ -30,13 +30,11 @@ const About: React.FC = () => (
             Liberté was custom-built to safely and comfortably carry passengers
             on sailing excursions around Cape Cod. Commissioned in 2001, she is
             inspected annually by the U.S. Coast Guard and certified to carry up
-            to 49 passengers. Her three-masted staysail rig, full bar, and
-            spacious deck make every sail a genuine New England adventure.
-            <br /><br />
-            Rather than the original two-mast configuration, Liberté features a 
-            three-masted staysail rig, which allows for easier sail handling, greater 
-            flexibility under varying conditions, and a more comfortable sailing 
-            experience for guests.
+            to 49 passengers. Rather than the original two-mast configuration,
+            she features a three-masted staysail rig, which allows for easier
+            sail handling, greater flexibility under varying conditions, and a
+            more comfortable experience for guests. Her full bar and spacious
+            deck make every sail a genuine New England adventure.
           </Body>
 
           <SectionHeading>The Crew</SectionHeading>
