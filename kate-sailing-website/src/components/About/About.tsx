@@ -44,7 +44,7 @@ const About: React.FC = () => (
           <Body>
           Captain Ross was raised on the Caribbean island, Bequia. His father was a 
           skipper and he started working on sailboats as a teenager. In 2012 he left 
-          the west indies to take a job on an Alden schooner in Maine.
+          the West Indies to take a job on an Alden schooner in Maine.
           <br /><br />
           While in Maine, Ross met Kate, who shared his love of sailing and travel. 
           After a decade working aboard boats together, they purchased Liberté in 2025 
@@ -150,19 +150,4 @@ const Body = styled.p`
   line-height: 1.8;
   color: ${({ theme }) => theme.colors.text};
   margin-bottom: 18px;
-`;
-
-const LearnMore = styled.a`
-  display: inline-block;
-  margin-top: 12px;
-  font-family: ${({ theme }) => theme.fonts.heading};
-  font-size: 1rem;
-  font-weight: 600;
-  color: ${({ theme }) => theme.colors.gold};
-  letter-spacing: 0.04em;
-  transition: color ${({ theme }) => theme.transition.fast};
-
-  &:hover {
-    color: ${({ theme }) => theme.colors.navy};
-  }
 `;
