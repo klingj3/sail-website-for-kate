@@ -25,7 +25,7 @@ export const privateChartersData: OccasionPageData = {
 
 ### Charter Rates
 
-Rates start at **$1,400** for a morning sail — as little as **$29/person** with a full group — and vary by date, time of day, and number of guests. For an exact quote for your event please email ${siteConfig.contact.email}.
+Rates start at **$1,400** for a morning sail — and vary by date, time of day, and number of guests. For an exact quote for your event please email ${siteConfig.contact.email}.
 
 *Rates include vessel, captain, crew, taxes, and brokerage fees.*
 *Not included: catering, beverages, or gratuity (customary 15–20%).*
@@ -46,7 +46,7 @@ Weddings • Corporate outings • Birthdays • Bachelorette parties • Family
 
 ### Vessel Specs
 
-74′ overall | 65′ on deck | 18.5′ beam  
+77′ overall | 65′ on deck | 18.5′ beam  
 Six sails · 1,700+ sq. ft. of sail  
 135hp diesel · Cruises at 8.5 knots`,
 };
@@ -84,11 +84,11 @@ export const bacheloretteData: OccasionPageData = {
 
 ### Private Charter
 
-Enjoy our 74′ schooner exclusively for your group (up to 49 guests)! Private charters are fully customizable, with a full onboard bar and spacious decks. You choose the music, decor, food, and drinks. Set the mood (nauti or elegant?) and relax without the worry of disrupting other guests.
+Enjoy our 77′ schooner exclusively for your group (up to 49 guests)! Private charters are fully customizable, with a full onboard bar and spacious decks. You choose the music, decor, food, and drinks. Set the mood (nauti or elegant?) and relax without the worry of disrupting other guests.
 
 ### Private Charter Rates
 
-Rates start at **$1,400** for a morning sail — as little as **$29/person** with a full group — and vary by date, time of day, and number of guests. For an exact quote for your event please email ${siteConfig.contact.email}.
+Rates start at **$1,400** for a morning sail — and vary by date, time of day, and number of guests. For an exact quote for your event please email ${siteConfig.contact.email}.
 
 *Rates include vessel, captain, crew, taxes, and brokerage fees.*
 *Not included: catering, beverages, or gratuity (customary 15–20%).*
@@ -99,7 +99,7 @@ For smaller gatherings (up to 20 guests), your group is also welcome to join one
 
 ### Vessel Specs
 
-74′ overall | 65′ on deck | 18.5′ beam  
+77′ overall | 65′ on deck | 18.5′ beam  
 Six sails · 1,700+ sq. ft. of sail  
 135hp diesel · Cruises at 8.5 knots`,
 };

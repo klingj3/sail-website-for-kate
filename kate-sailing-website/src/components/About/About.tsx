@@ -15,7 +15,7 @@ const About: React.FC = () => (
           <VesselImage src={VESSEL_IMAGE} alt="Schooner Liberté under sail" />
           <SpecsBox>
             <SpecsTitle>Vessel Specs</SpecsTitle>
-            <SpecLine>74′ overall | 65′ on deck | 18.5′ beam</SpecLine>
+            <SpecLine>77′ overall | 65′ on deck | 18.5′ beam</SpecLine>
             <SpecLine>Six sails · 1,700+ sq. ft. of sail</SpecLine>
             <SpecLine>135hp diesel · Cruises at 8.5 knots</SpecLine>
           </SpecsBox>

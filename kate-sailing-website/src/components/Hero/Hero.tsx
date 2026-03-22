@@ -27,7 +27,7 @@ const Hero: React.FC = () => (
         for All
       </Title>
       <Subheadline>
-        Daily &amp; private chartered sailing excursions aboard a 74′ schooner
+        Daily &amp; private chartered sailing excursions aboard a 77′ schooner
         &middot; Falmouth, Cape&nbsp;Cod
       </Subheadline>
 
