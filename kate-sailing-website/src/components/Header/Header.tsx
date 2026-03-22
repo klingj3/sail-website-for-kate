@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { FaInstagram, FaTripadvisor, FaChevronDown } from 'react-icons/fa';
+import siteConfig from 'siteConfig.json';
 
 const BASE = process.env.PUBLIC_URL ?? '';
 
-const FAREHARBOR_URL =
-  'https://fareharbor.com/embeds/book/theschoonerliberte/items/?flow=18587&back=https%3A%2F%2Fwww.theliberte.com%2F&g4=yes';
-
-const TRIPADVISOR_URL =
-  'https://www.tripadvisor.com/Attraction_Review-g41565-d3282429-Reviews-or80-Liberte_The_Schooner-Falmouth_Cape_Cod_Massachusetts.html';
+const FAREHARBOR_URL = siteConfig.links.fareHarbor;
+const TRIPADVISOR_URL = siteConfig.links.tripAdvisor;
 
 export interface HeaderProps {
   /** Start transparent over a hero, then turn solid on scroll */
@@ -88,7 +86,7 @@ const Header: React.FC<HeaderProps> = ({ transparent = false }) => {
 
           <Socials $light={isTransparent}>
             <SocialLink
-              href="https://www.instagram.com/schoonerliberte"
+              href={siteConfig.links.instagram}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
@@ -156,7 +154,7 @@ const Header: React.FC<HeaderProps> = ({ transparent = false }) => {
           </MobileLink>
           <MobileSocials>
             <MobileSocialLink
-              href="https://www.instagram.com/schoonerliberte"
+              href={siteConfig.links.instagram}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"

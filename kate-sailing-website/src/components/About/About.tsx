@@ -2,8 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Container } from 'styles/shared';
 
-const VESSEL_IMAGE =
-  'https://static.wixstatic.com/media/8c57dc_d0970f20bf064665ba72ac39f4b54550~mv2.jpg/v1/fill/w_600,h_900,al_c,q_80,enc_avif,quality_auto/8c57dc_d0970f20bf064665ba72ac39f4b54550~mv2.jpg';
+const VESSEL_IMAGE = `${process.env.PUBLIC_URL}/static/vessel-image.jpg`;
 
 const About: React.FC = () => (
   <Wrapper id="about">

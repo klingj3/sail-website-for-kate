@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { FaCopy, FaCheck } from 'react-icons/fa';
+import siteConfig from 'siteConfig.json';
 
-const DEFAULT_EMAIL = 'schoonerliberte@gmail.com';
+const DEFAULT_EMAIL = siteConfig.contact.email;
 
 interface Props {
   email?: string;

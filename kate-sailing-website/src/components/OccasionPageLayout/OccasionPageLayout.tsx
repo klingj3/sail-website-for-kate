@@ -5,6 +5,7 @@ import { Container } from 'styles/shared';
 import Header from 'components/Header';
 import Footer from 'components/Footer';
 import { OccasionPageData } from 'data/occasionPages';
+import siteConfig from 'siteConfig.json';
 
 interface Props {
   data: OccasionPageData;
@@ -36,8 +37,8 @@ const OccasionPageLayout: React.FC<Props> = ({ data }) => (
       <ContactStrip>
         <ContactText>
           Ready to book? Email{' '}
-          <a href="mailto:schoonerliberte@gmail.com">schoonerliberte@gmail.com</a>{' '}
-          or call <a href="tel:5085249121">(508) 524-9121</a>.
+          <a href={`mailto:${siteConfig.contact.email}`}>{siteConfig.contact.email}</a>{' '}
+          or call <a href={`tel:${siteConfig.contact.phoneTel}`}>{siteConfig.contact.phone}</a>.
         </ContactText>
       </ContactStrip>
     </main>

@@ -2,69 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { Container, SectionTitle, Button } from 'styles/shared';
 import { FaWineGlassAlt, FaSun, FaShieldAlt, FaUsers } from 'react-icons/fa';
-
-/* ── Booking URLs ───────────────────────────────── */
-const BOOKING = {
-  morning:
-    'https://fareharbor.com/embeds/book/theschoonerliberte/items/45092/calendar/2026/06/?back=https%3A%2F%2Fwww.theliberte.com%2F&g4=yes',
-  afternoon:
-    'https://fareharbor.com/embeds/book/theschoonerliberte/items/?flow=18587&back=https%3A%2F%2Fwww.theliberte.com%2F&g4=yes',
-  sunset:
-    'https://fareharbor.com/embeds/book/theschoonerliberte/items/45097/calendar/2026/06/?flow=18587&back=https%3A%2F%2Fwww.theliberte.com%2F&g4=yes',
-};
-
-/* ── Gallery images used as sail-section photos ─── */
-const IMAGES = {
-  morning:
-    'https://static.wixstatic.com/media/8c57dc_7a28c7ab8aa44a51b0f7ee01960c4af6~mv2.jpg/v1/fill/w_800,h_600,q_90,enc_avif,quality_auto/8c57dc_7a28c7ab8aa44a51b0f7ee01960c4af6~mv2.jpg',
-  afternoon:
-    'https://static.wixstatic.com/media/8c57dc_2b197fb080424cf6a0a8ff77520fec71~mv2.jpg/v1/fill/w_800,h_600,q_90,enc_avif,quality_auto/8c57dc_2b197fb080424cf6a0a8ff77520fec71~mv2.jpg',
-  sunset:
-    'https://static.wixstatic.com/media/8c57dc_8d924526ee9841bfa55c985c3ccdd09a~mv2.png/v1/fill/w_800,h_600,q_90,enc_avif,quality_auto/8c57dc_8d924526ee9841bfa55c985c3ccdd09a~mv2.png',
-};
-
-interface Sail {
-  title: string;
-  image: string;
-  duration: string;
-  departs: string;
-  description: string;
-  pricing: string;
-  bookingUrl: string;
-}
-
-const sails: Sail[] = [
-  {
-    title: 'Morning Sails',
-    image: IMAGES.morning,
-    duration: '2 hrs',
-    departs: '10:00 am',
-    description:
-      'A beautiful time of day for spotting wildlife and often when we experience the lightest breeze. Ideal for families or anyone looking to make the most of their day on Cape Cod.',
-    pricing: '$40 / adult · $25 / child',
-    bookingUrl: BOOKING.morning,
-  },
-  {
-    title: 'Afternoon Sails',
-    image: IMAGES.afternoon,
-    duration: '3 hrs',
-    departs: '1:30 pm',
-    description:
-      'The favorite among sailing enthusiasts — often when we have the best wind for a true New England sailing experience. Help crew raise the sails, look out for wildlife, or relax with a drink from our full bar.',
-    pricing: '$55 / adult · $30 / child',
-    bookingUrl: BOOKING.afternoon,
-  },
-  {
-    title: 'Sunset Sails',
-    image: IMAGES.sunset,
-    duration: '2 hrs',
-    departs: '6:00 / 6:30 pm',
-    description:
-      'Our most popular sail — a truly can\'t-miss Cape Cod experience. Enjoy golden hour from the water, capture stunning photographs, and raise a glass from our full bar as the sun dips below the horizon.',
-    pricing: '$65 / person (all ages)',
-    bookingUrl: BOOKING.sunset,
-  },
-];
+import sails from 'sails.json';
+import siteConfig from 'siteConfig.json';
 
 const features = [
   { icon: <FaWineGlassAlt />, label: 'Full Bar Aboard' },
@@ -79,16 +18,16 @@ const Sails: React.FC = () => (
       <SectionTitle>Ticketed Sails</SectionTitle>
       <SeasonBanner>
         Three unforgettable experiences · Departing daily from{' '}
-        <strong>Falmouth Harbor</strong>
+        <strong>{siteConfig.contact.venueName}</strong>
         <br />
-        <strong>June 20 – September 14</strong>
+        <strong>{siteConfig.season}</strong>
       </SeasonBanner>
 
       <Grid>
         {sails.map((sail) => (
           <Card key={sail.title}>
             <CardImage
-              src={sail.image}
+              src={`${process.env.PUBLIC_URL}${sail.image}`}
               alt={sail.title}
               loading="lazy"
             />
@@ -136,8 +75,17 @@ export default Sails;
 /* ── Styles ───────────────────────────────────────── */
 
 const Wrapper = styled.section`
-  padding: 80px 0;
+  padding: 120px 0 80px;
+  margin-top: -1px;
   background: ${({ theme }) => theme.colors.lightBlue};
+
+  @media (min-width: 768px) {
+    padding-top: 130px;
+  }
+
+  @media (min-width: 1200px) {
+    padding-top: 150px;
+  }
 `;
 
 const SeasonBanner = styled.p`

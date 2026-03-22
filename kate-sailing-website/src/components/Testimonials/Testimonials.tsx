@@ -1,40 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import { FaTripadvisor, FaStar } from 'react-icons/fa';
+import testimonials from 'testimonials.json';
+import siteConfig from 'siteConfig.json';
 
-const TRIPADVISOR_URL =
-  'https://www.tripadvisor.com/Attraction_Review-g41565-d3282429-Reviews-or80-Liberte_The_Schooner-Falmouth_Cape_Cod_Massachusetts.html';
-
-interface Testimonial {
-  headline: string;
-  quote: string;
-  attribution: string;
-  source: 'TripAdvisor';
-}
-
-const testimonials: Testimonial[] = [
-  {
-    headline: 'MUST DO FALMOUTH EXPERIENCE',
-    quote:
-      'The boat is beautiful and the crew delightful (though they declined our offer to incite a mutiny and sail to the Bahamas). It was nice to be able to bring our own cheese and baguette to enjoy with the beverages they provide.',
-    attribution: '— Ellen A.',
-    source: 'TripAdvisor',
-  },
-  {
-    headline: 'THIS IS A DO-NOT-MISS',
-    quote:
-      'I booked us thinking it was just another fun activity to do with the family while on Cape Cod, but it was so much more. The people that run this treat you like royalty — so kind, warm and welcoming. Our group had people from age 9 to 84 and all were happy.',
-    attribution: '— Heather R.',
-    source: 'TripAdvisor',
-  },
-  {
-    headline: 'PEACEFUL SAIL',
-    quote:
-      'I would highly recommend this for couples, friends, families — anyone who wants to just unplug and cherish the smell of the salt air.',
-    attribution: '— Claire Z.',
-    source: 'TripAdvisor',
-  },
-];
+const TRIPADVISOR_URL = siteConfig.links.tripAdvisor;
 
 const Stars: React.FC = () => (
   <StarsRow aria-label="5 out of 5 stars">
@@ -73,7 +43,7 @@ const Testimonials: React.FC = () => (
         rel="noopener noreferrer"
       >
         <FaTripadvisor />
-        Read 200+ reviews on TripAdvisor
+        Read {siteConfig.socialProof.reviewCount} reviews on TripAdvisor
       </TripAdvisorLink>
     </TripAdvisorCTA>
     <QuoteIconBottom>&rdquo;</QuoteIconBottom>

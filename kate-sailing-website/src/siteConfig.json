@@ -1,0 +1,26 @@
+{
+  "tagline": "Sailing Cape Cod since 2025 · Falmouth, MA",
+  "season": "June 20 – September 14",
+
+  "contact": {
+    "phone": "508-524-9121",
+    "phoneTel": "5085249121",
+    "email": "schoonerliberte@gmail.com",
+    "venueName": "Falmouth Harbor",
+    "addressLine1": "227 Clinton Ave.",
+    "addressLine2": "Falmouth, MA 02540",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Falmouth+Harbor+227+Clinton+Ave+Falmouth+MA+02540"
+  },
+
+  "links": {
+    "fareHarbor": "https://fareharbor.com/embeds/book/theschoonerliberte/items/?flow=18587&back=https%3A%2F%2Fwww.theliberte.com%2F&g4=yes",
+    "tripAdvisor": "https://www.tripadvisor.com/Attraction_Review-g41565-d3282429-Reviews-or80-Liberte_The_Schooner-Falmouth_Cape_Cod_Massachusetts.html",
+    "instagram": "https://www.instagram.com/schoonerliberte",
+    "instagramHandle": "@schoonerliberte"
+  },
+
+  "socialProof": {
+    "rating": "4.9",
+    "reviewCount": "200+"
+  }
+}

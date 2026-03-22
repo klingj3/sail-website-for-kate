@@ -3,23 +3,21 @@ import styled, { keyframes } from 'styled-components';
 import { FaStar, FaTripadvisor } from 'react-icons/fa';
 import { HiChevronDown } from 'react-icons/hi';
 import theme from 'styles/theme';
+import siteConfig from 'siteConfig.json';
 
-const VIDEO_SRC =
-  'https://video.wixstatic.com/video/8c57dc_5bf32a5e02db4975a1d7c6613b3ede2d/720p/mp4/file.mp4';
+const VIDEO_WEBM = `${process.env.PUBLIC_URL}/static/hero-video.webm`;
+const VIDEO_MP4 = `${process.env.PUBLIC_URL}/static/hero-video.mp4`;
 
-const POSTER_SRC =
-  'https://static.wixstatic.com/media/8c57dc_5bf32a5e02db4975a1d7c6613b3ede2df000.jpg/v1/fill/w_1920,h_1252,al_c,q_85,usm_0.33_1.00_0.00,enc_avif,quality_auto/8c57dc_5bf32a5e02db4975a1d7c6613b3ede2df000.jpg';
+const POSTER_SRC = `${process.env.PUBLIC_URL}/static/hero-poster.jpg`;
 
-const FAREHARBOR_URL =
-  'https://fareharbor.com/embeds/book/theschoonerliberte/items/?flow=18587&back=https%3A%2F%2Fwww.theliberte.com%2F&g4=yes';
-
-const TRIPADVISOR_URL =
-  'https://www.tripadvisor.com/Attraction_Review-g41565-d3282429-Reviews-or80-Liberte_The_Schooner-Falmouth_Cape_Cod_Massachusetts.html';
+const FAREHARBOR_URL = siteConfig.links.fareHarbor;
+const TRIPADVISOR_URL = siteConfig.links.tripAdvisor;
 
 const Hero: React.FC = () => (
   <Wrapper id="top">
-    <Video autoPlay muted loop playsInline poster={POSTER_SRC}>
-      <source src={VIDEO_SRC} type="video/mp4" />
+    <Video autoPlay loop playsInline poster={POSTER_SRC}>
+      <source src={VIDEO_WEBM} type="video/webm" />
+      <source src={VIDEO_MP4} type="video/mp4" />
     </Video>
     <Overlay />
     <Content>
@@ -54,7 +52,7 @@ const Hero: React.FC = () => (
         </Stars>
         <ProofText>
           <FaTripadvisor />
-          <span>4.9 · 200+ Reviews</span>
+          <span>{siteConfig.socialProof.rating} · {siteConfig.socialProof.reviewCount} Reviews</span>
         </ProofText>
       </SocialProof>
     </Content>
@@ -91,7 +89,16 @@ const Wrapper = styled.section`
   width: 100%;
   height: 100vh;
   min-height: 600px;
-  overflow: visible;
+  overflow: hidden;
+  margin-bottom: -62px;
+
+  @media (min-width: 768px) {
+    margin-bottom: -82px;
+  }
+
+  @media (min-width: 1200px) {
+    margin-bottom: -102px;
+  }
 `;
 
 const Video = styled.video`
@@ -264,7 +271,7 @@ const ScrollHint = styled.a`
 
 const WaveOverlay = styled.div`
   position: absolute;
-  bottom: -1px;
+  bottom: 0;
   left: 0;
   width: 100%;
   z-index: 3;

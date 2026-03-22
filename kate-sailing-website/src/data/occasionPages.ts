@@ -1,3 +1,5 @@
+import siteConfig from 'siteConfig.json';
+
 export interface OccasionPageData {
   title: string;
   image: string;
@@ -9,8 +11,7 @@ export interface OccasionPageData {
 
 export const privateChartersData: OccasionPageData = {
   title: 'Private Charters',
-  image:
-    'https://static.wixstatic.com/media/8c57dc_7e3e22afc93e4a8994c0faf492ea7bd4~mv2.png/v1/fill/w_397,h_600,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Wedding%20rings_tif.png',
+  image: `${process.env.PUBLIC_URL}/static/private-charters.png`,
   imageAlt: 'Wedding rings aboard Schooner Liberté',
   content: `Step aboard Liberté, a magnificent 74-foot, three-masted staysail schooner, and enjoy an unforgettable private sailing experience.
 
@@ -20,11 +21,11 @@ export const privateChartersData: OccasionPageData = {
 - Full onboard bar & music
 - Spacious deck
 - Private and Fully Customizable
-- Cape Cod Sailing Season: June 20 – September 14
+- Cape Cod Sailing Season: ${siteConfig.season}
 
 ### Charter Rates
 
-Rates start at **$1,400** for a morning sail — as little as **$29/person** with a full group — and vary by date, time of day, and number of guests. For an exact quote for your event please email schoonerliberte@gmail.com.
+Rates start at **$1,400** for a morning sail — as little as **$29/person** with a full group — and vary by date, time of day, and number of guests. For an exact quote for your event please email ${siteConfig.contact.email}.
 
 *Rates include vessel, captain, crew, taxes, and brokerage fees.*
 *Not included: catering, beverages, or gratuity (customary 15–20%).*
@@ -54,8 +55,7 @@ Six sails · 1,700+ sq. ft. of sail
 
 export const faqData: OccasionPageData = {
   title: 'FAQ',
-  image:
-    'https://static.wixstatic.com/media/8c57dc_d0970f20bf064665ba72ac39f4b54550~mv2.jpg/v1/fill/w_397,h_600,al_c,q_80,enc_avif,quality_auto/8c57dc_d0970f20bf064665ba72ac39f4b54550~mv2.jpg',
+  image: `${process.env.PUBLIC_URL}/static/vessel-image.jpg`,
   imageAlt: 'Aboard Schooner Liberté',
   content: `### What should we bring?
 
@@ -63,11 +63,11 @@ Guests are encouraged to dress for the elements and to bring an extra jacket, su
 
 ### Where should we park?
 
-Unfortunately, we cannot offer any onsite parking and we strongly encourage guests to carpool or use ride share services. The Falmouth marina park at 180 Scranton Ave. offers free public parking and is located an 8-minute walk from our dock at 227 Clinton Ave. It may fill up at certain times, so we suggest arriving early.
+Unfortunately, we cannot offer any onsite parking and we strongly encourage guests to carpool or use ride share services. The Falmouth marina park at 180 Scranton Ave. offers free public parking and is located an 8-minute walk from our dock at ${siteConfig.contact.addressLine1} It may fill up at certain times, so we suggest arriving early.
 
 ### Where do we sail?
 
-All public sails depart from Jim's Clam Shack at 227 Clinton Ave. Falmouth, MA. We depart Falmouth Harbor, promptly set sail, and depending on the wind and tide we may head west to Nobska Lighthouse, south to Vineyard Haven, or east past Falmouth Heights. Regardless of where the wind carries us it is guaranteed to be beautiful!
+All public sails depart from Jim's Clam Shack at ${siteConfig.contact.addressLine1} ${siteConfig.contact.addressLine2}. We depart Falmouth Harbor, promptly set sail, and depending on the wind and tide we may head west to Nobska Lighthouse, south to Vineyard Haven, or east past Falmouth Heights. Regardless of where the wind carries us it is guaranteed to be beautiful!
 
 ### What is the cancellation policy?
 
@@ -78,8 +78,7 @@ In the event the captain decides to cancel a trip due to the weather everyone wi
 
 export const bacheloretteData: OccasionPageData = {
   title: 'Bachelorette\nParties',
-  image:
-    'https://static.wixstatic.com/media/ec95981878a142abaeabde264b48587e.jpg/v1/fill/w_397,h_593,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Toasting%20with%20Champagne.jpg',
+  image: `${process.env.PUBLIC_URL}/static/bachelorette.jpg`,
   imageAlt: 'Toasting with champagne aboard Schooner Liberté',
   content: `Liberté offers two great options for an unforgettable bachelorette party...
 
@@ -89,7 +88,7 @@ Enjoy our 74′ schooner exclusively for your group (up to 49 guests)! Private c
 
 ### Private Charter Rates
 
-Rates start at **$1,400** for a morning sail — as little as **$29/person** with a full group — and vary by date, time of day, and number of guests. For an exact quote for your event please email schoonerliberte@gmail.com.
+Rates start at **$1,400** for a morning sail — as little as **$29/person** with a full group — and vary by date, time of day, and number of guests. For an exact quote for your event please email ${siteConfig.contact.email}.
 
 *Rates include vessel, captain, crew, taxes, and brokerage fees.*
 *Not included: catering, beverages, or gratuity (customary 15–20%).*
