@@ -15,7 +15,7 @@ const TRIPADVISOR_URL = siteConfig.links.tripAdvisor;
 
 const Hero: React.FC = () => (
   <Wrapper id="top">
-    <Video autoPlay loop playsInline poster={POSTER_SRC}>
+    <Video autoPlay muted loop playsInline poster={POSTER_SRC}>
       <source src={VIDEO_WEBM} type="video/webm" />
       <source src={VIDEO_MP4} type="video/mp4" />
     </Video>
