@@ -2,41 +2,15 @@ import React, { useState, useCallback } from 'react';
 import styled from 'styled-components';
 import { Container, SectionTitle } from 'styles/shared';
 import { FaInstagram } from 'react-icons/fa';
+import galleryImagesData from 'gallery.json';
+import siteConfig from 'siteConfig.json';
 
-const galleryImages = [
-  {
-    src: 'https://static.wixstatic.com/media/8c57dc_7a28c7ab8aa44a51b0f7ee01960c4af6~mv2.jpg/v1/fill/w_800,h_600,q_90,enc_avif,quality_auto/8c57dc_7a28c7ab8aa44a51b0f7ee01960c4af6~mv2.jpg',
-    alt: 'Schooner Liberté crew and guests on deck',
-  },
-  {
-    src: 'https://static.wixstatic.com/media/8c57dc_2b197fb080424cf6a0a8ff77520fec71~mv2.jpg/v1/fill/w_800,h_600,q_90,enc_avif,quality_auto/8c57dc_2b197fb080424cf6a0a8ff77520fec71~mv2.jpg',
-    alt: 'Close-up of the Liberté under sail',
-  },
-  {
-    src: 'https://static.wixstatic.com/media/8c57dc_ee22bdf6a36246028ed100175932a84b~mv2.jpg/v1/fill/w_800,h_600,q_90,enc_avif,quality_auto/8c57dc_ee22bdf6a36246028ed100175932a84b~mv2.jpg',
-    alt: 'Guests relaxing aboard the schooner',
-  },
-  {
-    src: 'https://static.wixstatic.com/media/8c57dc_d0970f20bf064665ba72ac39f4b54550~mv2.jpg/v1/fill/w_800,h_600,q_90,enc_avif,quality_auto/8c57dc_d0970f20bf064665ba72ac39f4b54550~mv2.jpg',
-    alt: 'Liberté sailing at twilight',
-  },
-  {
-    src: 'https://static.wixstatic.com/media/8c57dc_8d924526ee9841bfa55c985c3ccdd09a~mv2.png/v1/fill/w_800,h_600,q_90,enc_avif,quality_auto/8c57dc_8d924526ee9841bfa55c985c3ccdd09a~mv2.png',
-    alt: 'Moonrise over the schooner',
-  },
-  {
-    src: 'https://static.wixstatic.com/media/8c57dc_7e3e22afc93e4a8994c0faf492ea7bd4~mv2.png/v1/fill/w_800,h_600,q_90,enc_avif,quality_auto/8c57dc_7e3e22afc93e4a8994c0faf492ea7bd4~mv2.png',
-    alt: 'Sunset sailing on Cape Cod',
-  },
-  {
-    src: 'https://static.wixstatic.com/media/8c57dc_c21d8b562e4342f6b6a14f72d3a79c6c~mv2.jpg/v1/fill/w_800,h_600,q_90,enc_avif,quality_auto/8c57dc_c21d8b562e4342f6b6a14f72d3a79c6c~mv2.jpg',
-    alt: 'Crew member at the helm',
-  },
-  {
-    src: 'https://static.wixstatic.com/media/8c57dc_c99630d032a64ff9b800532f0a2f2c94~mv2.jpg/v1/fill/w_800,h_600,q_90,enc_avif,quality_auto/8c57dc_c99630d032a64ff9b800532f0a2f2c94~mv2.jpg',
-    alt: 'Wedding celebration aboard the Liberté',
-  },
-];
+const BASE = process.env.PUBLIC_URL;
+
+const galleryImages = galleryImagesData.map((img) => ({
+  src: `${BASE}${img.src}`,
+  alt: img.alt,
+}));
 
 const Gallery: React.FC = () => {
   const [lightbox, setLightbox] = useState<number | null>(null);
@@ -84,12 +58,12 @@ const Gallery: React.FC = () => {
 
         <InstagramCTA>
           <InstagramLink
-            href="https://www.instagram.com/schoonerliberte"
+            href={siteConfig.links.instagram}
             target="_blank"
             rel="noopener noreferrer"
           >
             <FaInstagram />
-            Follow our journey &nbsp;@schoonerliberte
+            Follow our journey &nbsp;{siteConfig.links.instagramHandle}
           </InstagramLink>
         </InstagramCTA>
       </Container>

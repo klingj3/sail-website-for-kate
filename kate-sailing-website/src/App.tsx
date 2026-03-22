@@ -18,7 +18,7 @@ import PrivateChartersPage from 'pages/PrivateCharters';
 import BachelorettePage from 'pages/Bachelorette';
 import FAQPage from 'pages/FAQ';
 
-// Section order: Hero → Sails → Testimonials → Gallery → About → Private Charters → Contact
+// Section order: Hero → Sails → Private Charters → Gallery → Testimonials → About → Contact
 const HomePage: React.FC = () => (
   <>
     <Header transparent />
@@ -27,9 +27,20 @@ const HomePage: React.FC = () => (
 
       <Sails />
 
-      {/* Wave: lightBlue → navy */}
+      <PrivateChartersSection />
+
+      {/* Wave: navy → white */}
       <WaveDivider
-        topColor={theme.colors.lightBlue}
+        topColor={theme.colors.navy}
+        bottomColor={theme.colors.white}
+        variant="gentle"
+      />
+
+      <Gallery />
+
+      {/* Wave: white → navy */}
+      <WaveDivider
+        topColor={theme.colors.white}
         bottomColor={theme.colors.navy}
         variant="gentle"
       />
@@ -43,25 +54,7 @@ const HomePage: React.FC = () => (
         variant="gentle"
       />
 
-      <Gallery />
-
-      {/* Wave: white → white */}
-      <WaveDivider
-        topColor={theme.colors.white}
-        bottomColor={theme.colors.white}
-        variant="gentle"
-      />
-
       <About />
-
-      <PrivateChartersSection />
-
-      {/* Wave: navy → offWhite */}
-      <WaveDivider
-        topColor={theme.colors.navy}
-        bottomColor={theme.colors.offWhite}
-        variant="gentle"
-      />
 
       <Contact />
     </main>

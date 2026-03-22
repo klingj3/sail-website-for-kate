@@ -2,8 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Container } from 'styles/shared';
 
-const VESSEL_IMAGE =
-  'https://static.wixstatic.com/media/8c57dc_d0970f20bf064665ba72ac39f4b54550~mv2.jpg/v1/fill/w_600,h_900,al_c,q_80,enc_avif,quality_auto/8c57dc_d0970f20bf064665ba72ac39f4b54550~mv2.jpg';
+const VESSEL_IMAGE = `${process.env.PUBLIC_URL}/static/vessel-image.jpg`;
 
 const About: React.FC = () => (
   <Wrapper id="about">
@@ -16,7 +15,7 @@ const About: React.FC = () => (
           <VesselImage src={VESSEL_IMAGE} alt="Schooner Liberté under sail" />
           <SpecsBox>
             <SpecsTitle>Vessel Specs</SpecsTitle>
-            <SpecLine>74′ overall | 65′ on deck | 18.5′ beam</SpecLine>
+            <SpecLine>77′ overall | 65′ on deck | 18.5′ beam</SpecLine>
             <SpecLine>Six sails · 1,700+ sq. ft. of sail</SpecLine>
             <SpecLine>135hp diesel · Cruises at 8.5 knots</SpecLine>
           </SpecsBox>

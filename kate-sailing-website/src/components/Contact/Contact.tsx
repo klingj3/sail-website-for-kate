@@ -4,9 +4,9 @@ import styled from 'styled-components';
 import { Container, SectionTitle } from 'styles/shared';
 import { FaMapMarkerAlt, FaEnvelope, FaPhone, FaQuestionCircle } from 'react-icons/fa';
 import CopyEmail from 'components/CopyEmail';
+import siteConfig from 'siteConfig.json';
 
-const MAPS_URL =
-  'https://www.google.com/maps/search/?api=1&query=Falmouth+Harbor+227+Clinton+Ave+Falmouth+MA+02540';
+const MAPS_URL = siteConfig.contact.mapsUrl;
 
 const Contact: React.FC = () => (
   <Wrapper id="contact">
@@ -14,7 +14,7 @@ const Contact: React.FC = () => (
       <SectionTitle>Find Us</SectionTitle>
       <DepartureNote>
         Schooner Liberté departs daily from{' '}
-        <strong>Falmouth Harbor</strong>.
+        <strong>{siteConfig.contact.venueName}</strong>.
       </DepartureNote>
 
       <InfoGrid>
@@ -22,11 +22,11 @@ const Contact: React.FC = () => (
           <IconWrap><FaMapMarkerAlt /></IconWrap>
           <InfoLabel>Departure Point</InfoLabel>
           <InfoText>
-            Falmouth Harbor
+            {siteConfig.contact.venueName}
             <br />
-            227 Clinton Ave.
+            {siteConfig.contact.addressLine1}
             <br />
-            Falmouth, MA 02540
+            {siteConfig.contact.addressLine2}
           </InfoText>
           <MapsLink
             href={MAPS_URL}
@@ -46,7 +46,7 @@ const Contact: React.FC = () => (
         <InfoItem>
           <IconWrap><FaPhone /></IconWrap>
           <InfoLabel>Call</InfoLabel>
-          <InfoLink href="tel:5085249121">508-524-9121</InfoLink>
+          <InfoLink href={`tel:${siteConfig.contact.phoneTel}`}>{siteConfig.contact.phone}</InfoLink>
         </InfoItem>
       </InfoGrid>
 
