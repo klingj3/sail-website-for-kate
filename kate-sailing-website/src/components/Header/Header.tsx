@@ -79,9 +79,22 @@ const Header: React.FC<HeaderProps> = ({ transparent = false }) => {
               </DropdownMenu>
             </DropdownWrap>
 
-            <NavLink href={`${BASE}/#contact`} $light={isTransparent}>
-              Contact
-            </NavLink>
+            <DropdownWrap>
+              <NavLink href={`${BASE}/#contact`} $light={isTransparent} as="a">
+                Find Us
+                <ChevronIcon $light={isTransparent}>
+                  <FaChevronDown />
+                </ChevronIcon>
+              </NavLink>
+              <DropdownMenu $light={isTransparent}>
+                <DropdownLink href={`${BASE}/#contact`} $light={isTransparent}>
+                  Departure Point
+                </DropdownLink>
+                <DropdownLink href={`${BASE}/parking`} $light={isTransparent}>
+                  Parking
+                </DropdownLink>
+              </DropdownMenu>
+            </DropdownWrap>
           </Nav>
 
           <Socials $light={isTransparent}>
@@ -150,8 +163,11 @@ const Header: React.FC<HeaderProps> = ({ transparent = false }) => {
             Bachelorette Parties
           </MobileSubLink>
           <MobileLink href={`${BASE}/#contact`} onClick={handleNavClick}>
-            Contact
+            Find Us
           </MobileLink>
+          <MobileSubLink href={`${BASE}/parking`} onClick={handleNavClick}>
+            Parking
+          </MobileSubLink>
           <MobileSocials>
             <MobileSocialLink
               href={siteConfig.links.instagram}

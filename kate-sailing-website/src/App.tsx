@@ -1,5 +1,5 @@
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import theme from 'styles/theme';
 import GlobalStyles from 'styles/GlobalStyles';
@@ -17,6 +17,7 @@ import WaveDivider from 'components/WaveDivider';
 import PrivateChartersPage from 'pages/PrivateCharters';
 import BachelorettePage from 'pages/Bachelorette';
 import FAQPage from 'pages/FAQ';
+import ParkingPage from 'pages/Parking';
 
 // Section order: Hero → Sails → Private Charters → Gallery → Testimonials → About → Contact
 const HomePage: React.FC = () => (
@@ -63,13 +64,27 @@ const HomePage: React.FC = () => (
   </>
 );
 
+const ScrollToTop: React.FC = () => {
+  const { pathname, hash } = useLocation();
+
+  useEffect(() => {
+    if (!hash) {
+      window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+    }
+  }, [pathname, hash]);
+
+  return null;
+};
+
 const App: React.FC = () => (
   <ThemeProvider theme={theme}>
     <GlobalStyles />
+    <ScrollToTop />
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/private-charters" element={<PrivateChartersPage />} />
       <Route path="/bachelorette" element={<BachelorettePage />} />
+      <Route path="/parking" element={<ParkingPage />} />
       <Route path="/faq" element={<FAQPage />} />
     </Routes>
   </ThemeProvider>

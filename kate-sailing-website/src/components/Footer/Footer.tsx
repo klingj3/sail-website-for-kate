@@ -42,9 +42,10 @@ const Footer: React.FC = () => (
           <FooterLink href="/#sails">Ticketed Sails</FooterLink>
           <FooterLink href="/#about">About</FooterLink>
           <FooterLink href="/#gallery">Gallery</FooterLink>
+          <FooterLink as={Link} to="/parking">Parking</FooterLink>
           <FooterLink as={Link} to="/private-charters">Private Charters</FooterLink>
           <FooterLink as={Link} to="/bachelorette">Bachelorette Parties</FooterLink>
-          <FooterLink href="/#contact">Contact</FooterLink>
+          <FooterLink href="/#contact">Find Us</FooterLink>
           <FooterLink as={Link} to="/faq">FAQ</FooterLink>
         </NavCol>
 

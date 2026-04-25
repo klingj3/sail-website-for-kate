@@ -26,14 +26,17 @@ const About: React.FC = () => (
           <SectionHeading>The Vessel</SectionHeading>
 
           <Body>
-            Liberté was custom-built to safely and comfortably carry passengers
-            on sailing excursions around Cape Cod. Commissioned in 2001, she is
-            inspected annually by the U.S. Coast Guard and certified to carry up
-            to 49 passengers. Rather than the original two-mast configuration,
-            she features a three-masted staysail rig, which allows for easier
-            sail handling, greater flexibility under varying conditions, and a
-            more comfortable experience for guests. Her full bar and spacious
-            deck make every sail a genuine New England adventure.
+            Liberté was custom-built to safely and comfortably carry passengers on sailing excursions around Cape Cod.
+            Commissioned in 2001, she is inspected annually by the U.S. Coast Guard and is certified to carry up to 49
+            passengers.
+            <br/>
+            <br/>
+            Her design is based on the Hout Bay 70 by naval architect Dudley Dix, originally conceived as a two-masted,
+            gaff-rigged schooner intended to be a heavy yet fast offshore cruiser. Liberté’s design was extensively
+            modified to suit passenger service.
+            Rather than the original two-mast configuration, Liberté features a three-masted staysail rig, which allows
+            for easier sail handling, greater flexibility under varying conditions, and a more comfortable sailing
+            experience for guests. Her full bar and spacious deck make every sail a relaxing and comfortable occasion.
           </Body>
 
           <SectionHeading>The Crew</SectionHeading>

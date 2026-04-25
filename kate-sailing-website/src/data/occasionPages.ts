@@ -63,7 +63,7 @@ Guests are encouraged to dress for the elements and to bring an extra jacket, su
 
 ### Where should we park?
 
-Unfortunately, we cannot offer any onsite parking and we strongly encourage guests to carpool or use ride share services. The Falmouth marina park at 180 Scranton Ave. offers free public parking and is located an 8-minute walk from our dock at ${siteConfig.contact.addressLine1} It may fill up at certain times, so we suggest arriving early.
+Unfortunately, we cannot offer any onsite parking and we strongly encourage guests to carpool or use ride share services. Please see our [parking page](/parking) for a map and nearby parking suggestions. Most passengers should expect to walk 5-10 minutes from parking to the dock, so we suggest arriving early.
 
 ### Where do we sail?
 

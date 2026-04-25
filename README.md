@@ -4,6 +4,8 @@ This is a little project I'm doing for my sister Kate's new sailing business on
 Cape Cod. The site shows off the different sails she offers and lets people book
 tickets through FareHarbor.
 
+What follows below are isntructions for her to make small changes to this site as a non-programmer.
+
 ---
 
 ## Quick reference — what to edit and where

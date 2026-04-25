@@ -1,5 +1,5 @@
 /* Design-token CSS variables (referenced as CSS fallbacks / legacy).
    The styled-components theme (src/styles/theme.ts) is the authoritative
    source of truth for all design tokens used in components.
-   GlobalStyles.ts owns the CSS reset — do not duplicate it here. */
+   GlobalStyles.ts owns the CSS reset and .sail-* surfaces, page-hero layout, and tips grid — do not duplicate those here. */
 @import './styles/variables.css';
