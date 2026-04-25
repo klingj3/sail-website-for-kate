@@ -1,10 +1,10 @@
 [
   {
-    "src": "/static/morning-sail.jpg",
+    "src": "/static/morning-sail.jpg?v=2",
     "alt": "Schooner Liberté crew and guests on deck"
   },
   {
-    "src": "/static/afternoon-sail.jpg",
+    "src": "/static/afternoon-sail.jpg?v=2",
     "alt": "Close-up of the Liberté under sail"
   },
   {
@@ -16,7 +16,7 @@
     "alt": "Liberté sailing at twilight"
   },
   {
-    "src": "/static/sunset-sail.jpg",
+    "src": "/static/sunset-sail.jpg?v=2",
     "alt": "Moonrise over the schooner"
   },
   {

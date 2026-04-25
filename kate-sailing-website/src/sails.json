@@ -1,7 +1,7 @@
 [
   {
     "title": "Morning Sails",
-    "image": "/static/morning-sail.jpg",
+    "image": "/static/morning-sail.jpg?v=2",
     "duration": "2 hrs",
     "departs": "10:00 am",
     "description": "A beautiful time of day for spotting wildlife and often when we experience the lightest breeze. Ideal for families or anyone looking to make the most of their day on Cape Cod.",
@@ -10,7 +10,7 @@
   },
   {
     "title": "Afternoon Sails",
-    "image": "/static/afternoon-sail.jpg",
+    "image": "/static/afternoon-sail.jpg?v=2",
     "duration": "2-3 hrs",
     "departs": "1:30 pm",
     "description": "The favorite among sailing enthusiasts — often when we have the best wind for a true New England sailing experience. Help crew raise the sails, look out for wildlife, or relax with a drink from our full bar.",
@@ -19,7 +19,7 @@
   },
   {
     "title": "Sunset Sails",
-    "image": "/static/sunset-sail.jpg",
+    "image": "/static/sunset-sail.jpg?v=2",
     "duration": "2 hrs",
     "departs": "6:00 / 6:30 pm",
     "description": "Our most popular sail — a truly can't-miss Cape Cod experience. Enjoy golden hour from the water, capture stunning photographs, and raise a glass from our full bar as the sun dips below the horizon.",
